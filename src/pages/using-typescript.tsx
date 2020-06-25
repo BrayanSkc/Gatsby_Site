@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { TransitionLink } from "gatsby-plugin-transition-link/components/TransitionLink"
 import { TweenMax, Power3, gsap, Elastic, TimelineMax, Back } from "gsap"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 type DataProps = {
   site: {
     buildTime: string
@@ -99,10 +100,10 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
         Pellentesque lobortis luctus est, vel bibendum metus fringilla vitae.
         Vivamus blandit sapien justo, bibendum hendrerit est bibendum non.
       </p>
-      {/* <AniLink swipe top="entry" to="/" entryOffset={80}>
+      <AniLink swipe top="entry" to="/blog" entryOffset={80}>
       Go back to the homepage
-    </AniLink> */}
-      <TransitionLink
+    </AniLink>
+      {/* <TransitionLink
         to="/blog"
         exit={{
           length: 1,
@@ -113,7 +114,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
         }}
       >
         Go to Blog
-      </TransitionLink>
+      </TransitionLink> */}
     </Layout>
   )
 }
